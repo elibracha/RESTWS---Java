@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Create table if not exists -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!-- Hibernate will show the SQL Queries -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <!-- The JDBC driver of your database -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <!-- Indicate the database to generate suitable SQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <!-- The JDBC URL to the database instance -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost/microservices?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+        <!-- The database username -->
+        <property name="hibernate.connection.username">root</property>
+        <!-- The database password -->
+        <property name="hibernate.connection.password">Smor12345</property>
+        <!-- Hibernate pool size -->
+        <property name="hibernate.connection.pool_size">5</property>
+        <property name="hibernate.c3p0.min_size">3</property>
+        <property name="hibernate.c3p0.max_size">10</property>
+
+
+        <!-- XML mapping file -->
+		<mapping class = "core.api.entities.User"/>
+    </session-factory>
+</hibernate-configuration>
