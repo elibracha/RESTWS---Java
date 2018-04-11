@@ -32,6 +32,7 @@ public class UserDBDAO implements UserDAO{
 
 	@Override
 	public UserDTO getUserByName(String username) {
+
 		UserDTO userDTO = null;
 		
 		CriteriaBuilder cb = session.getCriteriaBuilder();
